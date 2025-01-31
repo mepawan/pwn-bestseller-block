@@ -4,7 +4,7 @@
  * Plugin Name: PWN Bestseller Block
  * Description: Display bestselling books by genre using the Biblio API
  * Version: 1.0.0
- * Author: Your Name
+ * Author: Ravendra Patel
  */
 
 if (!defined('ABSPATH')) {
