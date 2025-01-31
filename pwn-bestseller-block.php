@@ -1,4 +1,16 @@
 <?php
+
+/**
+ * Plugin Name: PWN Bestseller Block
+ * Description: Display bestselling books by genre using the Biblio API
+ * Version: 1.0.0
+ * Author: Your Name
+ */
+
+if (!defined('ABSPATH')) {
+    exit;
+}
+
 // Register block
 function pwn_bestseller_block_init() {
     // Make sure all dependencies are available
