@@ -1,0 +1,5 @@
+- git clone inside wp-content/pllugins
+- run : npm install
+- run : npm run build
+- activate plugin from wp admin portal
+- use block named 'PWN Bestseller' 
