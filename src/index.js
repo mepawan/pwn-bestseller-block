@@ -83,7 +83,7 @@ const BookDisplay = ({ book, isEditor }) => {
 };
 
 registerBlockType('pwn-bestseller/bestseller-block', {
-    title: 'Bestseller Display',
+    title: 'PWN Bestseller',
     icon: 'book-alt',
     category: 'widgets',
     attributes: {
