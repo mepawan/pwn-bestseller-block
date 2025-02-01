@@ -1,0 +1,33 @@
+{
+  "name": "pwn-bestseller-block",
+  "version": "1.0.0",
+  "main": "webpack.config.js",
+  "scripts": {
+    "build": "webpack --mode production",
+    "start": "webpack --watch --mode development"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@wordpress/block-editor": "^12.0.0",
+    "@wordpress/blocks": "^12.0.0",
+    "@wordpress/components": "^23.0.0",
+    "@wordpress/element": "^5.0.0",
+    "react-select": "^5.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.26.7",
+    "@babel/preset-env": "^7.26.7",
+    "@babel/preset-react": "^7.26.3",
+    "@wordpress/scripts": "^30.10.0",
+    "babel-loader": "^9.2.1",
+    "css-loader": "^7.1.2",
+    "file-loader": "^6.2.0",
+    "mini-css-extract-plugin": "^2.9.2",
+    "style-loader": "^4.0.0",
+    "webpack": "^5.97.1",
+    "webpack-cli": "^6.0.1"
+  }
+}

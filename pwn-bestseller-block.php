@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Plugin Name: PWN Bestseller Block
  * Description: Display bestselling books by genre using the Biblio API
@@ -19,17 +18,26 @@ function pwn_bestseller_block_init() {
     }
 
     // Register our block script
-    pwn_register_script(
+    wp_register_script(
         'pwn-bestseller-block-editor',
         plugins_url('build/index.js', __FILE__),
         array('wp-blocks', 'wp-element', 'wp-editor', 'wp-components', 'wp-i18n')
     );
 
-    // Register our block styles
+    // Register editor styles
+    wp_register_style(
+        'pwn-bestseller-block-editor-style',
+        plugins_url('build/style.css', __FILE__),
+        array(),
+        filemtime(plugin_dir_path(__FILE__) . 'build/style.css')
+    );
+
+    // Register frontend styles
     wp_register_style(
         'pwn-bestseller-block-style',
         plugins_url('build/style.css', __FILE__),
-        array()
+        array(),
+        filemtime(plugin_dir_path(__FILE__) . 'build/style.css')
     );
 
     // Register the block
@@ -67,7 +75,8 @@ function pwn_get_genres() {
     );
     
     if (is_wp_error($response)) {
-        return new WP_Error('api_error', 'Failed to fetch genres', array('status' => 500));
+        //print_r($response->get_error_message());
+        return new WP_Error('api_error', $response->get_error_message(), array('status' => 500));
     }
     
     $body = json_decode(wp_remote_retrieve_body($response), true);
